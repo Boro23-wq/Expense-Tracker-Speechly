@@ -3,6 +3,9 @@ import {Card, CardHeader, CardContent, Typography, Grid, Divider} from '@materia
 
 import useStyles from './styles'
 
+import Form from '../Main/Form/Form'
+import List from '../Main/List/List'
+
 const Main = () => {
     const classes = useStyles()
     return (
@@ -15,12 +18,12 @@ const Main = () => {
                     TRY SAYING: Add income for $100 in Category Salary for Monday
                 </Typography>
                 <Divider/>
-                {/* FORM */}
+                <Form/>
             </CardContent>
             <CardContent className={classes.cardContent}>
                 <Grid container spacing={2}>
                     <Grid item xs={12}>
-                        {/* <List /> */}
+                        <List/>
                     </Grid>
                 </Grid>
             </CardContent>
