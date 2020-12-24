@@ -5,7 +5,7 @@ const contextReducer = (state, action) => {
       transactions = [action.payload, ...state];
       return transactions;
     case 'DELETE_TRANSACTION':
-      ransactions = state.filter((t) => t.id !== action.payload);
+      transactions = state.filter((t) => t.id !== action.payload);
       return transactions;
     default:
       return state;
