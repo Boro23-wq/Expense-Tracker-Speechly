@@ -10,7 +10,6 @@ import {
 const useTransactions = (title) => {
   resetCategories();
   const { transactions } = useContext(ExpenseTrackerContext);
-  console.log(transactions);
   const transactionsPerType = transactions.filter((t) => t.type === title);
   const total = transactionsPerType.reduce(
     (acc, currVal) => (acc += currVal.amount),
@@ -18,7 +17,7 @@ const useTransactions = (title) => {
   );
   const categories = title === 'Income' ? incomeCategories : expenseCategories;
 
-  console.log({ transactionsPerType, total, categories });
+  // console.log({ transactionsPerType, total, categories });
 
   transactionsPerType.forEach((t) => {
     const category = categories.find((c) => c.type === t.category);
